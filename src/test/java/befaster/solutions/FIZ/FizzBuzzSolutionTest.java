@@ -38,6 +38,12 @@ public class FizzBuzzSolutionTest {
 	}
 	
 	@Test
+	public void fizzBuzzTest1() {
+		assertEquals("fizz buzz", sut.fizzBuzz(546));
+		
+	}
+	
+	@Test
 	public void noneTest() {
 		assertEquals("22", sut.fizzBuzz(22));
 		
