@@ -14,16 +14,15 @@ public class FizzBuzzSolution {
 			return "fizz buzz deluxe";
 		
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
-				&& (number >10  && number %2 !=0))
+				&& (number %2 !=0))
 			return "fizz fake deluxe";
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
-				&& (number >10 ))
+				)
 			return "fizz deluxe";
 		else if ((number % 5 == 0 || isDigitPresent(number, 3))
-				&& (number >10  && number %2 !=0))
+				&&  number %2 !=0)
 			return "buzz fake deluxe";
-		else if ((number % 5 == 0 || isDigitPresent(number, 5))
-				&& (number >10 ))
+		else if ((number % 5 == 0 || isDigitPresent(number, 5)))
 			return "buzz deluxe";
 		else if ( number %2 !=0 )
 			return "fake deluxe";
