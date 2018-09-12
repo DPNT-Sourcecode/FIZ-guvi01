@@ -8,32 +8,25 @@ public class FizzBuzzSolution {
 	public String fizzBuzz(Integer number) {
 		
 		
-		if(isFizzBuzz(number)  && areAllDigitsIdentical(number) && number %2 !=0)
+		if(isFizzBuzz(number)  && number %2 !=0)
 			return "fizz buzz fake deluxe";
-		else if(isFizzBuzz(number)  && areAllDigitsIdentical(number))
+		else if(isFizzBuzz(number) )
 			return "fizz buzz deluxe";
-		else if (isFizzBuzz(number))
-			return "fizz buzz";
+		
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
-				&& (number >10 && areAllDigitsIdentical(number) && number %2 !=0))
+				&& (number >10  && number %2 !=0))
 			return "fizz fake deluxe";
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
-				&& (number >10 && areAllDigitsIdentical(number)))
+				&& (number >10 ))
 			return "fizz deluxe";
 		else if ((number % 5 == 0 || isDigitPresent(number, 3))
-				&& (number >10 && areAllDigitsIdentical(number) && number %2 !=0))
+				&& (number >10  && number %2 !=0))
 			return "buzz fake deluxe";
 		else if ((number % 5 == 0 || isDigitPresent(number, 3))
-				&& (number >10 && areAllDigitsIdentical(number)))
+				&& (number >10 ))
 			return "buzz deluxe";
-		else if (number % 3 == 0 || isDigitPresent(number, 3))
-			return "fizz";
-		else if (number % 5 == 0 || isDigitPresent(number, 5))
-			return "buzz";
-		else if (number >10 && areAllDigitsIdentical(number) && number %2 !=0 )
+		else if ( number %2 !=0 )
 			return "fake deluxe";
-		else if (number >10 && areAllDigitsIdentical(number))
-			return "deluxe";
 		else
 			return number.toString();
 
