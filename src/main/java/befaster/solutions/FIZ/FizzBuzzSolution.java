@@ -22,7 +22,7 @@ public class FizzBuzzSolution {
 		else if ((number % 5 == 0 || isDigitPresent(number, 3))
 				&& (number >10  && number %2 !=0))
 			return "buzz fake deluxe";
-		else if ((number % 5 == 0 || isDigitPresent(number, 3))
+		else if ((number % 5 == 0 || isDigitPresent(number, 5))
 				&& (number >10 ))
 			return "buzz deluxe";
 		else if ( number %2 !=0 )
