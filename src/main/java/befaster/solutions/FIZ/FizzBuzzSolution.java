@@ -24,8 +24,7 @@ public class FizzBuzzSolution {
 			return "buzz fake deluxe";
 		else if ((number % 5 == 0 || isDigitPresent(number, 5)))
 			return "buzz deluxe";
-		else if ( number %2 !=0 )
-			return "fake deluxe";
+	
 		else
 			return number.toString();
 
