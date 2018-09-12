@@ -41,8 +41,8 @@ public class FizzBuzzSolution {
 	private boolean isFizzBuzz(Integer number) {
 		if (number % 15 == 0 
 				|| (isDigitPresent(number, 3) && isDigitPresent(number, 5))
-				|| (number % 3 == 0 && isDigitPresent(number, 5)) 
-				|| (number % 5 == 0 && isDigitPresent(number, 3)))
+				|| (number % 3 == 0 && isDigitPresent(number, 3)) 
+				|| (number % 5 == 0 && isDigitPresent(number, 5)))
 			return true;
 		else
 			return false;
