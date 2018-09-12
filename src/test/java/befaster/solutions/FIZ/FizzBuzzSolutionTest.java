@@ -9,43 +9,43 @@ public class FizzBuzzSolutionTest {
 	FizzBuzzSolution sut = new FizzBuzzSolution();
 	@Test
 	public void fizzTestFor3Factor() {
-		assertEquals("fizz", sut.fizzBuzz(12));
+		assertEquals("fizz deluxe", sut.fizzBuzz(12));
 			
 	}
 	
 	@Test
 	public void fizzTestfor3Present() {
-		assertEquals("fizz", sut.fizzBuzz(23));
+		assertEquals("fizz fake deluxe", sut.fizzBuzz(23));
 			
 	}
 	
 	@Test
 	public void buzzTestFor5Factor() {
-		assertEquals("buzz", sut.fizzBuzz(20));
+		assertEquals("buzz deluxe", sut.fizzBuzz(20));
 		
 	}
 	
 	@Test
 	public void buzzTestFor5Present() {
-		assertEquals("buzz", sut.fizzBuzz(52));
+		assertEquals("buzz deluxe", sut.fizzBuzz(52));
 		
 	}
 	
 	@Test
 	public void fizzBuzzTest() {
-		assertEquals("fizz buzz", sut.fizzBuzz(35));
+		assertEquals("fizz buzz fake deluxe", sut.fizzBuzz(35));
 		
 	}
 	
 	@Test
 	public void fizzBuzzTest1() {
-		assertEquals("fizz buzz", sut.fizzBuzz(546));
+		assertEquals("fizz buzz deluxe", sut.fizzBuzz(546));
 		
 	}
 	
 	@Test
 	public void noneTest() {
-		assertEquals("17", sut.fizzBuzz(17));
+		assertEquals("16", sut.fizzBuzz(16));
 		
 	}
 	
@@ -59,7 +59,7 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void delux() {
-		assertEquals("deluxe", sut.fizzBuzz(22));
+		assertEquals("fake deluxe", sut.fizzBuzz(47));
 		
 	}
 
