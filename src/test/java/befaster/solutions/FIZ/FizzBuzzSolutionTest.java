@@ -8,26 +8,41 @@ public class FizzBuzzSolutionTest {
 
 	FizzBuzzSolution sut = new FizzBuzzSolution();
 	@Test
-	public void fizzTest() {
-		assertEquals("fizz", sut.fizzBuzz(3));
+	public void fizzTestFor3Factor() {
+		assertEquals("fizz", sut.fizzBuzz(12));
 			
 	}
 	
-	public void buzzTest() {
-		assertEquals("buzz", sut.fizzBuzz(5));
+	@Test
+	public void fizzTestfor3Present() {
+		assertEquals("fizz", sut.fizzBuzz(23));
+			
+	}
+	
+	@Test
+	public void buzzTestFor5Factor() {
+		assertEquals("buzz", sut.fizzBuzz(20));
 		
 	}
 	
+	@Test
+	public void buzzTestFor5Present() {
+		assertEquals("buzz", sut.fizzBuzz(52));
+		
+	}
+	
+	@Test
 	public void fizzBuzzTest() {
-		assertEquals("fizz buzz", sut.fizzBuzz(15));
+		assertEquals("fizz buzz", sut.fizzBuzz(35));
 		
 	}
 	
+	@Test
 	public void noneTest() {
-		assertEquals("23", sut.fizzBuzz(23));
+		assertEquals("22", sut.fizzBuzz(22));
 		
 	}
 	
-	
+	  
 
 }
