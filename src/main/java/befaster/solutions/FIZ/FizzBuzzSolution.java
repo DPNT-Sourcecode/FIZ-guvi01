@@ -1,5 +1,8 @@
 package befaster.solutions.FIZ;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class FizzBuzzSolution {
 
 	public String fizzBuzz(Integer number) {
@@ -41,7 +44,10 @@ public class FizzBuzzSolution {
 	}
 	
 	private boolean areAllDigitsIdentical(Integer x) {
-		return true;
+		Pattern p = Pattern.compile("^(\\d)\1*$");
+		Matcher m = p.matcher(x.toString());
+		
+		return m.matches();
 		}
 
 }
