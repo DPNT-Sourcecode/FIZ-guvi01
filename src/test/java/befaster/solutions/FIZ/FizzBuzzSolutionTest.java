@@ -49,6 +49,10 @@ public class FizzBuzzSolutionTest {
 		
 	}
 	
-	  
+	@Test
+	public void fizzBuzzDelux() {
+		assertEquals("fizz buzz deluxe", sut.fizzBuzz(555));
+		
+	}
 
 }
