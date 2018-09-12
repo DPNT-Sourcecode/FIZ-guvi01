@@ -60,7 +60,7 @@ public class FizzBuzzSolution {
 
 
 	private boolean isBuzz(Integer number) {
-		return number % 5 == 0 && isDigitPresent(number, 5);
+		return number % 5 == 0 || isDigitPresent(number, 5);
 	}
 
 
@@ -68,7 +68,7 @@ public class FizzBuzzSolution {
 
 
 	private boolean isFizz(Integer number) {
-		return number % 3 == 0 && isDigitPresent(number, 3);
+		return number % 3 == 0 || isDigitPresent(number, 3);
 	}
 
 	private boolean isDigitPresent(Integer x, Integer digit) {
