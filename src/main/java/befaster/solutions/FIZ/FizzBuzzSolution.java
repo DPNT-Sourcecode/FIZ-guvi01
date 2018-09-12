@@ -8,22 +8,24 @@ public class FizzBuzzSolution {
 	public String fizzBuzz(Integer number) {
 		
 		
-		if(isFizzBuzz(number)  && number %2 !=0)
+		if(isFizzBuzz(number) && isDelux(number) && number %2 !=0)
 			return "fizz buzz fake deluxe";
-		else if(isFizzBuzz(number) )
+		else if(isFizzBuzz(number) && isDelux(number))
 			return "fizz buzz deluxe";
-		else if ((number % 3 == 0 && isDigitPresent(number, 3) && (number %2 !=0))
+		else if(isFizzBuzz(number) )
+			return "fizz buzz";
+		else if ((isFizz(number) && (number %2 !=0))
 				)
 			return "fizz fake deluxe";
-		else if ((number % 3 == 0 && isDigitPresent(number, 3))
+		else if (isFizz(number)
 				)
 			return "fizz deluxe";
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
 				)
 			return "fizz";
-		else if ((number % 5 == 0 && isDigitPresent(number, 5))  && (number %2 !=0))
+		else if (isBuzz(number)  && (number %2 !=0))
 			return "buzz fake deluxe";
-		else if ((number % 5 == 0 && isDigitPresent(number, 5)))
+		else if (isBuzz(number))
 			return "buzz deluxe";
 		
 		else if ((number % 5 == 0 || isDigitPresent(number, 5)))
@@ -35,14 +37,9 @@ public class FizzBuzzSolution {
 	}
 	
 	
-	
-	
-	
 	private boolean isFizzBuzz(Integer number) {
-		if (number % 15 == 0 
-				|| (isDigitPresent(number, 3) && isDigitPresent(number, 5))
-				|| (number % 3 == 0 && isDigitPresent(number, 3)) 
-				|| (number % 5 == 0 && isDigitPresent(number, 5)))
+		if (isFizz(number) 
+				&& isBuzz(number))
 			return true;
 		else
 			return false;
@@ -50,12 +47,28 @@ public class FizzBuzzSolution {
 	}
 	
 	private boolean isDelux(Integer number) {
-		if ((number % 3 == 0 && isDigitPresent(number, 3)) 
-				|| (number % 5 == 0 && isDigitPresent(number, 5)))
+		if (isFizz(number) 
+				|| isBuzz(number))
 			return true;
 		else
 			return false;
 		
+	}
+
+
+
+
+
+	private boolean isBuzz(Integer number) {
+		return number % 5 == 0 && isDigitPresent(number, 5);
+	}
+
+
+
+
+
+	private boolean isFizz(Integer number) {
+		return number % 3 == 0 && isDigitPresent(number, 3);
 	}
 
 	private boolean isDigitPresent(Integer x, Integer digit) {
