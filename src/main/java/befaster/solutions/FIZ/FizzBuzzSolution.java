@@ -23,6 +23,8 @@ public class FizzBuzzSolution {
 			return "fizz";
 		else if (number % 5 == 0 || isDigitPresent(number, 5))
 			return "buzz";
+		else if (number >10 && areAllDigitsIdentical(number) && number %2 !=0 )
+			return "fake deluxe";
 		else if (number >10 && areAllDigitsIdentical(number))
 			return "deluxe";
 		else
