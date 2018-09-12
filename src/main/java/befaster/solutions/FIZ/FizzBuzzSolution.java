@@ -48,6 +48,15 @@ public class FizzBuzzSolution {
 			return false;
 		
 	}
+	
+	private boolean isDelux(Integer number) {
+		if ((number % 3 == 0 && isDigitPresent(number, 3)) 
+				|| (number % 5 == 0 && isDigitPresent(number, 5)))
+			return true;
+		else
+			return false;
+		
+	}
 
 	private boolean isDigitPresent(Integer x, Integer digit) {
 		while (x > 0) {
