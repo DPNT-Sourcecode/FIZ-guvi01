@@ -19,7 +19,7 @@ public class FizzBuzzSolution {
 		else if ((number % 3 == 0 || isDigitPresent(number, 3))
 				)
 			return "fizz deluxe";
-		else if ((number % 5 == 0 || isDigitPresent(number, 3))
+		else if ((number % 5 == 0 || isDigitPresent(number, 5))
 				&&  number %2 !=0)
 			return "buzz fake deluxe";
 		else if ((number % 5 == 0 || isDigitPresent(number, 5)))
