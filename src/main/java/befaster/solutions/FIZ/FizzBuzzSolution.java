@@ -6,66 +6,52 @@ import java.util.regex.Pattern;
 public class FizzBuzzSolution {
 
 	public String fizzBuzz(Integer number) {
-		
-		
-		if(isFizzBuzz(number) && isDelux(number) && number %2 !=0)
+
+		if (isFizzBuzz(number) && isDelux(number) && number % 2 != 0)
 			return "fizz buzz fake deluxe";
-		else if(isFizzBuzz(number) && isDelux(number))
+		else if (isFizzBuzz(number) && isDelux(number))
 			return "fizz buzz deluxe";
-		else if(isFizzBuzz(number) )
+		else if (isFizzBuzz(number))
 			return "fizz buzz";
-		else if ((isFizz(number) && (number %2 !=0))
-				)
-			return "fizz fake deluxe";
-		else if (isFizz(number)
-				)
+		// else if ((isFizz(number) && (number %2 !=0))
+		// )
+		// return "fizz fake deluxe";
+		else if (isFizz(number)  && isDelux(number))
 			return "fizz deluxe";
-		else if ((number % 3 == 0 || isDigitPresent(number, 3))
-				)
+		else if ((number % 3 == 0 || isDigitPresent(number, 3)))
 			return "fizz";
-		else if (isBuzz(number)  && (number %2 !=0))
-			return "buzz fake deluxe";
+		// else if (isBuzz(number) && (number %2 !=0))
+		// return "buzz fake deluxe";
 		else if (isBuzz(number))
 			return "buzz deluxe";
-		
+
 		else if ((number % 5 == 0 || isDigitPresent(number, 5)))
 			return "buzz";
-	
+
 		else
 			return number.toString();
 
 	}
-	
-	
+
 	private boolean isFizzBuzz(Integer number) {
-		if (isFizz(number) 
-				&& isBuzz(number))
+		if (isFizz(number) && isBuzz(number))
 			return true;
 		else
 			return false;
-		
+
 	}
-	
+
 	private boolean isDelux(Integer number) {
-		if (isFizz(number) 
-				|| isBuzz(number))
+		if (isFizz(number) || isBuzz(number))
 			return true;
 		else
 			return false;
-		
+
 	}
-
-
-
-
 
 	private boolean isBuzz(Integer number) {
 		return number % 5 == 0 || isDigitPresent(number, 5);
 	}
-
-
-
-
 
 	private boolean isFizz(Integer number) {
 		return number % 3 == 0 || isDigitPresent(number, 3);
@@ -80,12 +66,12 @@ public class FizzBuzzSolution {
 
 		return x > 0;
 	}
-	
+
 	private boolean areAllDigitsIdentical(Integer x) {
 		Pattern p = Pattern.compile("^(\\d)\\1*$");
 		Matcher m = p.matcher(x.toString());
-		
+
 		return m.matches();
-		}
+	}
 
 }
