@@ -13,6 +13,12 @@ public class FizzBuzzSolution {
 			return "fizz buzz deluxe";
 		else if (isFizzBuzz(number))
 			return "fizz buzz";
+		else if ((number % 3 == 0 || isDigitPresent(number, 3))
+				&& (number >10 && areAllDigitsIdentical(number)))
+			return "fizz deluxe";
+		else if ((number % 5 == 0 || isDigitPresent(number, 3))
+				&& (number >10 && areAllDigitsIdentical(number)))
+			return "buzz deluxe";
 		else if (number % 3 == 0 || isDigitPresent(number, 3))
 			return "fizz";
 		else if (number % 5 == 0 || isDigitPresent(number, 5))
