@@ -8,10 +8,6 @@ public class FizzBuzzSolution {
 	public String fizzBuzz(Integer number) {
 		
 		
-		if ((number % 3 == 0 || isDigitPresent(number, 3))
-				)
-			return "fizz";
-		else 
 		if(isFizzBuzz(number)  && number %2 !=0)
 			return "fizz buzz fake deluxe";
 		else if(isFizzBuzz(number) )
@@ -24,7 +20,9 @@ public class FizzBuzzSolution {
 		else if ((number % 3 == 0 && isDigitPresent(number, 3))
 				)
 			return "fizz deluxe";
-	
+		else if ((number % 3 == 0 || isDigitPresent(number, 3))
+				)
+			return "fizz";
 		else if ((number % 5 == 0 || isDigitPresent(number, 5))
 				&&  number %2 !=0)
 			return "buzz fake deluxe";
