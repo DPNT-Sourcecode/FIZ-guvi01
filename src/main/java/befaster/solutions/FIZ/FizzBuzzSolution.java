@@ -17,7 +17,7 @@ public class FizzBuzzSolution {
 			return "fizz";
 		else if (number % 5 == 0 || isDigitPresent(number, 5))
 			return "buzz";
-		else if (number >10 || areAllDigitsIdentical(number))
+		else if (number >10 && areAllDigitsIdentical(number))
 			return "deluxe";
 		else
 			return number.toString();
@@ -48,7 +48,7 @@ public class FizzBuzzSolution {
 	}
 	
 	private boolean areAllDigitsIdentical(Integer x) {
-		Pattern p = Pattern.compile("^(\\d)\1*$");
+		Pattern p = Pattern.compile("^(\\d)\\1*$");
 		Matcher m = p.matcher(x.toString());
 		
 		return m.matches();
