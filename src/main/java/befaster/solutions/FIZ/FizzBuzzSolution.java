@@ -8,8 +8,9 @@ public class FizzBuzzSolution {
 	public String fizzBuzz(Integer number) {
 		
 		
-
-		if(isFizzBuzz(number)  && areAllDigitsIdentical(number))
+		if(isFizzBuzz(number)  && areAllDigitsIdentical(number) && number %2 !=0)
+			return "fizz buzz fake deluxe";
+		else if(isFizzBuzz(number)  && areAllDigitsIdentical(number))
 			return "fizz buzz deluxe";
 		else if (isFizzBuzz(number))
 			return "fizz buzz";
@@ -31,6 +32,8 @@ public class FizzBuzzSolution {
 			return number.toString();
 
 	}
+	
+	
 	
 	
 	
