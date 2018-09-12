@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 public class FizzBuzzSolution {
 
 	public String fizzBuzz(Integer number) {
+		
+		
 
 		if(isFizzBuzz(number)  && areAllDigitsIdentical(number))
 			return "fizz buzz deluxe";
@@ -21,6 +23,8 @@ public class FizzBuzzSolution {
 			return number.toString();
 
 	}
+	
+	
 	
 	private boolean isFizzBuzz(Integer number) {
 		if (number % 15 == 0 

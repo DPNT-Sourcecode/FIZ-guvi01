@@ -45,7 +45,7 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void noneTest() {
-		assertEquals("22", sut.fizzBuzz(22));
+		assertEquals("17", sut.fizzBuzz(17));
 		
 	}
 	
