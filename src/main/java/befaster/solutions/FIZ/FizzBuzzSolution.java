@@ -33,7 +33,7 @@ public class FizzBuzzSolution {
 	}
 
 	private boolean isFizzBuzz(Integer number) {
-		if (isFizz(number) && isBuzz(number))
+		if ((number % 3 == 0 || isDigitPresent(number, 3)) && (number % 5 == 0 || isDigitPresent(number, 5)))
 			return true;
 		else
 			return false;
