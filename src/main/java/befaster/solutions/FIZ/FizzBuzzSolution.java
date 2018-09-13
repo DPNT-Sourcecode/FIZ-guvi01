@@ -13,17 +13,12 @@ public class FizzBuzzSolution {
 			return "fizz buzz deluxe";
 		else if (isFizzBuzz(number))
 			return "fizz buzz";
-		// else if ((isFizz(number) && (number %2 !=0))
-		// )
-		// return "fizz fake deluxe";
 		else if (number % 3 == 0 &&isDigitPresent(number, 3) && number %2 !=0)
 			return "fizz fake deluxe";
 		else if (number % 3 == 0 &&isDigitPresent(number, 3))
 			return "fizz deluxe";
 		else if ((number % 3 == 0 || isDigitPresent(number, 3)))
 			return "fizz";
-		// else if (isBuzz(number) && (number %2 !=0))
-		// return "buzz fake deluxe";
 		else if (number % 5 == 0 && isDigitPresent(number, 5) && number %2 !=0)
 			return "buzz fake deluxe";
 		 else if (number % 5 == 0 && isDigitPresent(number, 5))
@@ -54,11 +49,11 @@ public class FizzBuzzSolution {
 	}
 
 	private boolean isBuzz(Integer number) {
-		return number % 5 == 0 || isDigitPresent(number, 5);
+		return number % 5 == 0 && isDigitPresent(number, 5);
 	}
 
 	private boolean isFizz(Integer number) {
-		return number % 3 == 0 || isDigitPresent(number, 3);
+		return number % 3 == 0 && isDigitPresent(number, 3);
 	}
 
 	private boolean isDigitPresent(Integer x, Integer digit) {
